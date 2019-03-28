@@ -8,6 +8,7 @@ import { ShowListComponent } from './components/show-list/show-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AddShowsComponent } from './add-shows/add-shows.component';
 import {FormsModule} from '@angular/forms';
+import { HeaderComponent } from './components/layout/header/header.component';
 
 
 
@@ -17,6 +18,7 @@ import {FormsModule} from '@angular/forms';
     ShowsComponent,
     ShowListComponent,
     AddShowsComponent,
+    HeaderComponent,
 
   ],
   imports: [

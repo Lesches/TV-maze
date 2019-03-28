@@ -28,6 +28,13 @@ showUrl: string = 'https://jsonplaceholder.typicode.com/todos';
     const url = `${this.showUrl}/{$show.id}`;
     return this.http.delete<Show>(url, httpOptions);
   }
+
+  // add show
+
+  addShows(show: Show): Observable<Show>{
+
+    return this.http.post<Show>(this.showUrl, show, httpOptions);
+  }
   // toggle completed
   toggleCompleted(show: Show): Observable<any>{
     const url = `${this.showUrl}/{$show.id}`;

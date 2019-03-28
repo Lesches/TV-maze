@@ -1,3 +1,4 @@
+<app-add-shows (addShows)="addShows($event)"></app-add-shows>
 <app-show-list *ngFor="let show of shows" [show]= "show" (deleteShow)="deleteShow($event)">
 
 </app-show-list>

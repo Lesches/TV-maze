@@ -6,17 +6,27 @@ import { AppComponent } from './app.component';
 import { ShowsComponent } from './components/shows/shows.component';
 import { ShowListComponent } from './components/show-list/show-list.component';
 import {HttpClientModule} from '@angular/common/http';
+import { AddShowsComponent } from './add-shows/add-shows.component';
+import {FormsModule} from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowsComponent,
-    ShowListComponent
+    ShowListComponent,
+    AddShowsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

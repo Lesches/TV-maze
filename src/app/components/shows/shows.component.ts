@@ -20,7 +20,7 @@ this.shows = shows;
   deleteShow(show: Show){
     this.shows = this.shows.filter(t => t.id !== show.id);
 
-    //remove from server
+    // remove from server
     this.showService.deleteShow(show).subscribe();
   }
 }

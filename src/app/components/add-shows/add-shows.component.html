@@ -1,4 +1,5 @@
+<app-header></app-header>
 <form class="form" (ngSubmit)="onSubmit()">
   <input type="text" name="title" [(ngModel)]="title" placeholder="Enter the show you wish to search">
-  <input type="submit" value="Search" class="button">
+  <button mat-stroked-button routerLink="shows/{{title}}" >Search</button>
 </form>

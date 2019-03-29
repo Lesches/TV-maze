@@ -12,9 +12,8 @@ shows: Show[];
   constructor(private showService: ShowService) { }
 
   ngOnInit() {
-this.showService.getShows().subscribe(shows => {
-this.shows = shows;
-});
+// this.showService.
+// });
   }
 // remove from UI
   deleteShow(show: Show){

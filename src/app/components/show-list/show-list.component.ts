@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import {Show} from '../../models/Show';
 import {ShowService} from '../../services/show.service';
+import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-show-list',
@@ -8,15 +10,24 @@ import {ShowService} from '../../services/show.service';
   styleUrls: ['./show-list.component.css']
 })
 export class ShowListComponent implements OnInit {
-@Input() show: Show;
-@Output() deleteShow: EventEmitter<Show> = new EventEmitter();
-  constructor(private showService: ShowService) { }
+  shows: any;
+/*@Input() show: Show;
+@Output() deleteShow: EventEmitter<Show> = new EventEmitter();*/
+
+
+  constructor(private showService: ShowService, private router: Router, private route: ActivatedRoute) {
+this.showService.getShows(
+  this.route.snapshot.paramMap.get('query')
+  ).subscribe(result => this.shows = result);
+
+}
+
 
   ngOnInit() {
   }
 
 
-  // set dynamic classes
+  /* set dynamic classes
 setClasses() {
    let classes = {
      show: true,
@@ -24,7 +35,7 @@ setClasses() {
    }
 
    return classes;
-}
+
 
 onToggle(show) {
     show.completed = !show.completed;
@@ -38,5 +49,5 @@ onToggle(show) {
 
     // toggle on server
 
-  }
+  }*/
 }

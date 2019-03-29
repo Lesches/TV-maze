@@ -1,7 +1,8 @@
-<div [ngClass]="setClasses()">
+<div >
 
-  <p>
-    <input (change)="onToggle(show)" type="checkbox">{{show.title}}
-    <button (click)="onDelete()" class="del">x</button>
+  <p *ngFor ("let show of shows") [show] = show>
+
+    <!--input (change)="onToggle(show)" type="checkbox">{{show.title}}
+    <button (click)="onDelete()" class="del">x</button-->
   </p>
 </div>

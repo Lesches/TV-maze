@@ -14,11 +14,9 @@ title: string;
   }
 
   onSubmit() {
-    const show = {
-    title: this.title,
-    completed: false };
+    const title = this.title;
 
-    this.addShows.emit(show);
+    this.addShows.emit(title);
   }
 
 }

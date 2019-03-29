@@ -13,31 +13,31 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ShowService {
-showUrl: string = 'https://jsonplaceholder.typicode.com/todos';
-  todosLimit = '?_limit=5';
+showUrl: any = 'http://api.tvmaze.com/search/shows?q=';
+ // todosLimit = '?_limit=5';
   constructor(private http: HttpClient) { }
 
   // get shows
-  getShows(): Observable<Show[]> {
-   return this.http.get<Show[]>(`${this.showUrl}${this.todosLimit}`);
+  getShows(t) {
+   return this.http.get('http://api.tvmaze.com/search/shows?q=' + t);
   }
 
   // delete show
 
-  deleteShow(show:Show): Observable<Show>{
-    const url = `${this.showUrl}/{$show.id}`;
+  deleteShow(show: Show): Observable<Show>{
+    const url = `${this.showUrl}/{$show.title}`;
     return this.http.delete<Show>(url, httpOptions);
   }
 
   // add show
 
-  addShows(show: Show): Observable<Show>{
+  addShows(show: Show): Observable<Show> {
 
-    return this.http.post<Show>(this.showUrl, show, httpOptions);
+    return this.http.post<Show>(this.showUrl + show.title, show, httpOptions);
   }
   // toggle completed
-  toggleCompleted(show: Show): Observable<any>{
-    const url = `${this.showUrl}/{$show.id}`;
+  toggleCompleted(show: Show): Observable<any> {
+    const url = `${this.showUrl}/{$show.title}`;
     return this.http.put(url, show, httpOptions);
   }
 

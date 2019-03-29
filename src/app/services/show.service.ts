@@ -19,7 +19,8 @@ showUrl: any = 'http://api.tvmaze.com/search/shows?q=';
 
   // get shows
   getShows(t) {
-   return this.http.get('http://api.tvmaze.com/search/shows?q=' + t);
+
+    return this.http.get('http://api.tvmaze.com/search/shows?q=' + t);
   }
 
   // delete show

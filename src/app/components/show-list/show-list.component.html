@@ -1,6 +1,7 @@
 <div >
 
-  <p *ngFor ("let show of shows") [show] = show>
+  <p *ngFor="let show of shows">
+   {{show.show.name}}
 
     <!--input (change)="onToggle(show)" type="checkbox">{{show.title}}
     <button (click)="onDelete()" class="del">x</button-->

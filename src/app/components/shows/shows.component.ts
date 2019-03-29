@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Show} from '../../models/Show';
 import {ShowService} from '../../services/show.service';
 
+
 @Component({
   selector: 'app-shows',
   templateUrl: './shows.component.html',

@@ -9,11 +9,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { AddShowsComponent } from './components/add-shows/add-shows.component';
 import {FormsModule} from '@angular/forms';
 import { HeaderComponent } from './components/layout/header/header.component';
-// import {MatExpansionModule} from '@angular/material/expansion';
-
-
-
-
+import {MatExpansionModule} from '@angular/material/expansion';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +19,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
     ShowListComponent,
     AddShowsComponent,
     HeaderComponent,
+    DetailsComponent,
 
   ],
   imports: [
@@ -29,10 +27,6 @@ import { HeaderComponent } from './components/layout/header/header.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-
-
-
-
 
   ],
   providers: [],

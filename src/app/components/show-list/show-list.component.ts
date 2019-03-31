@@ -12,9 +12,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class ShowListComponent implements OnInit {
   shows: any;
-/*@Input() show: Show;
-@Output() deleteShow: EventEmitter<Show> = new EventEmitter();*/
-
 
   constructor(private showService: ShowService, private router: Router, private route: ActivatedRoute) {
 
@@ -27,29 +24,4 @@ this.showService.getShows(
 
   ngOnInit() {
   }
-
-
-  /* set dynamic classes
-setClasses() {
-   let classes = {
-     show: true,
-     'is-complete': this.show.completed
-   }
-
-   return classes;
-
-
-onToggle(show) {
-    show.completed = !show.completed;
-  this.showService.toggleCompleted(show).subscribe(show => console.log(show));
-}
-
-  onDelete(show) {
-
-    // toggle in UI
-    this.deleteShow.emit(show);
-
-    // toggle on server
-
-  }*/
 }

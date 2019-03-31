@@ -1,9 +1,27 @@
 <app-header></app-header>
-<!--app-add-shows></app-add-shows-->
-<div >
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let show of shows">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{show.show.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{show.show.premiered| date}}
+      </mat-panel-description>
+      <mat-panel-description>
+        {{show.show.status}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-action-row>
+      <button mat-raised-button routerLink="/details/{{show.show.id}}">Details
 
-  <p *ngFor="let show of shows">
-   {{show.show.name}}
-  </p>
+      </button>
 
-</div>
+    </mat-action-row>
+    <mat-panel-description>
+      <img style="float:left;" *ngIf="show.show.image" src="{{show.show.image.medium}}">
+      <span [innerHTML]="show.show.summary"></span>
+    </mat-panel-description>
+  </mat-expansion-panel>
+</mat-accordion>
+

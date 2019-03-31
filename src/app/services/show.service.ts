@@ -23,6 +23,18 @@ showUrl: any = 'http://api.tvmaze.com/search/shows?q=';
     return this.http.get('http://api.tvmaze.com/search/shows?q=' + t);
   }
 
+  // get seasons
+  getSeasons(t) {
+
+    return this.http.get('http://api.tvmaze.com/shows/' + t + '/seasons');
+  }
+
+  // get episodes
+  getEpisodes(t) {
+
+    return this.http.get('http://api.tvmaze.com/seasons/' + t + '/episodes');
+  }
+
   // delete show
 
   deleteShow(show: Show): Observable<Show>{

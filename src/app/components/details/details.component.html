@@ -1,14 +1,5 @@
 <app-header></app-header>
 <!--app-add-shows></app-add-shows-->
-<div >
-
-  <p *ngFor="let show of shows">
-    {{show.show.name}}
-    {{show.show.image.medium}}
-    Premiered: {{show.show.premiered}}
-    Status: {{show.show.status}}
-    {{show.show.status}}
-
-  </p>
-
-</div>
+<p>
+{{show.summary}}
+</p>

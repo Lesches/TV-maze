@@ -13,8 +13,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ShowService {
-showUrl: any = 'http://api.tvmaze.com/search/shows?q=';
- // todosLimit = '?_limit=5';
+  showUrl: any = 'http://api.tvmaze.com/search/shows?q=';
+  // todosLimit = '?_limit=5';
   constructor(private http: HttpClient) { }
 
   // get shows
@@ -22,7 +22,11 @@ showUrl: any = 'http://api.tvmaze.com/search/shows?q=';
 
     return this.http.get('http://api.tvmaze.com/search/shows?q=' + t);
   }
+// get summary
+  getSummary(t) {
 
+    return this.http.get('http://api.tvmaze.com/search/shows?q=' + t);
+  }
   // get seasons
   getSeasons(t) {
 

@@ -13,7 +13,7 @@ import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
 import { DetailsComponent } from './components/details/details.component';
 import {MatButtonModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { SeasonsComponent } from './seasons/seasons.component';
+import { SeasonsComponent } from './components/seasons/seasons.component';
 
 
 @NgModule({

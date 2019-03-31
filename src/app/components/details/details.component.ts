@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {OnInit} from '@angular/core/src/metadata/lifecycle_hooks';
+
+import { Component} from '@angular/core';
 import {ShowService} from '../../services/show.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
@@ -8,12 +10,12 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  shows: any;
+  seasons: any;
 
   constructor(private showService: ShowService, private router: Router, private route: ActivatedRoute) {
-    this.showService.getShows(
-      this.route.snapshot.paramMap.get('query')
-    ).subscribe(result => this.shows = result);
+    this.showService.getSeasons(
+      this.route.snapshot.paramMap.get('id')
+    ).subscribe(result => this.seasons = result);
   }
 
   ngOnInit() {

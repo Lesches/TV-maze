@@ -1,5 +1,23 @@
 <app-header></app-header>
-<!--app-add-shows></app-add-shows-->
-<p>
-{{show.summary}}
-</p>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let season of seasons">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Season {{season.number}}
+      </mat-panel-title>
+      <mat-panel-description>
+
+      </mat-panel-description>
+
+    </mat-expansion-panel-header>
+    <app-seasons [id]="season.id"></app-seasons>
+    <mat-action-row>
+
+
+    </mat-action-row>
+    <mat-panel-description>
+      <!--img style="float:left;" *ngIf="show.image" src="">
+      <span [innerHTML]="show.show.summary"></span-->
+    </mat-panel-description>
+  </mat-expansion-panel>
+</mat-accordion>

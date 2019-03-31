@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {ShowsComponent} from './components/shows/shows.component';
 import {ShowListComponent} from './components/show-list/show-list.component';
 import {DetailsComponent} from './components/details/details.component';
+import {SeasonsComponent} from './components/seasons/seasons.component';
 
 const routes: Routes = [
   {path: '', component: ShowsComponent},

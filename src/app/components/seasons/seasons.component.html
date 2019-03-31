@@ -1,3 +1,24 @@
-<p>
-  seasons works!
-</p>
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let episode of episodes">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{episode.id}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{episode.name}}
+        {{episode.airdate}}
+      </mat-panel-description>
+
+    </mat-expansion-panel-header>
+    <app-seasons [id]></app-seasons>
+    <mat-action-row>
+
+
+    </mat-action-row>
+    <mat-panel-description>
+      <!--img style="float:left;" *ngIf="show.image" src="">
+      <span [innerHTML]="show.show.summary"></span-->
+    </mat-panel-description>
+  </mat-expansion-panel>
+</mat-accordion>

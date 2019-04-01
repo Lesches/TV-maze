@@ -13,6 +13,8 @@ title: string;
   ngOnInit() {
   }
 
+
+  // sends the search term (title) to addShows
   onSubmit() {
     const title = this.title;
 

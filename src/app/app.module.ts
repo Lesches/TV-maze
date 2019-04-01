@@ -9,7 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AddShowsComponent } from './components/add-shows/add-shows.component';
 import {FormsModule} from '@angular/forms';
 import { HeaderComponent } from './components/layout/header/header.component';
-import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
+import {MatExpansionModule} from '@angular/material/expansion';
 import { DetailsComponent } from './components/details/details.component';
 import {MatButtonModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';

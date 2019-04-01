@@ -1,3 +1,4 @@
+<!--Displays every show with its name, date premiered and current status. Each individual panel can be expanded for more detail-->
 <app-header></app-header>
 <mat-accordion>
   <mat-expansion-panel *ngFor="let show of shows">
@@ -12,6 +13,7 @@
         Status: {{show.show.status}}
       </mat-panel-description>
     </mat-expansion-panel-header>
+    <!--Press this button to browse the shows by season.-->
     <mat-action-row>
       <button mat-raised-button routerLink="/details/{{show.show.id}}">Details
 

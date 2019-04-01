@@ -1,3 +1,4 @@
+// receives the show season id to display the seasons
 import {OnInit} from '@angular/core/src/metadata/lifecycle_hooks';
 
 import { Component} from '@angular/core';
@@ -14,6 +15,7 @@ export class DetailsComponent implements OnInit {
 
   constructor(private showService: ShowService, private router: Router, private route: ActivatedRoute) {
     this.showService.getSeasons(
+
       this.route.snapshot.paramMap.get('id')
     ).subscribe(result => this.seasons = result);
   }

@@ -11,8 +11,10 @@ export class SeasonsComponent implements OnInit {
   episodes: any;
   @Input() id: string;
   constructor(private showService: ShowService, private router: Router, private route: ActivatedRoute) {
+// Receives the selected season's id
 
     this.showService.getEpisodes(
+
       this.route.snapshot.paramMap.get('id')
     ).subscribe(result => this.episodes = result);
 

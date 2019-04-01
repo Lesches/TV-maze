@@ -1,3 +1,4 @@
+<!--displays the selected show's seasons and sends its id to the seasons module-->
 <app-header></app-header>
 <mat-accordion>
   <mat-expansion-panel *ngFor="let season of seasons">
@@ -16,8 +17,6 @@
 
     </mat-action-row>
     <mat-panel-description>
-      <!--img style="float:left;" *ngIf="show.image" src="">
-      <span [innerHTML]="show.show.summary"></span-->
     </mat-panel-description>
   </mat-expansion-panel>
 </mat-accordion>

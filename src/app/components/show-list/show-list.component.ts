@@ -1,7 +1,5 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import {Show} from '../../models/Show';
+import { Component, OnInit} from '@angular/core';
 import {ShowService} from '../../services/show.service';
-import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute, Router} from '@angular/router';
 
 
@@ -10,6 +8,8 @@ import {ActivatedRoute, Router} from '@angular/router';
   templateUrl: './show-list.component.html',
   styleUrls: ['./show-list.component.css']
 })
+
+// Creates an array 'shows' with all the shows selected by the user
 export class ShowListComponent implements OnInit {
   shows: any;
 

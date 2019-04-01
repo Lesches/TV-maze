@@ -1,5 +1,7 @@
 # Tvmaze
 
+An application to help the user search TV shows and get information, seasons and episodes for those shows.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
 ## Development server

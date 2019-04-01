@@ -38,24 +38,4 @@ export class ShowService {
 
     return this.http.get('http://api.tvmaze.com/seasons/' + t + '/episodes');
   }
-
-  // delete show
-
-  deleteShow(show: Show): Observable<Show>{
-    const url = `${this.showUrl}/{$show.title}`;
-    return this.http.delete<Show>(url, httpOptions);
-  }
-
-  // add show
-
-  addShows(show: Show): Observable<Show> {
-
-    return this.http.post<Show>(this.showUrl + show.title, show, httpOptions);
-  }
-  // toggle completed
-  toggleCompleted(show: Show): Observable<any> {
-    const url = `${this.showUrl}/{$show.title}`;
-    return this.http.put(url, show, httpOptions);
-  }
-
 }

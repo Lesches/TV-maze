@@ -11,9 +11,9 @@ export class SeasonsComponent implements OnInit {
   episodes: any;
   @Input() id: string;
   constructor(private showService: ShowService, private router: Router, private route: ActivatedRoute) {
-    // console.log(this.id);
+
     this.showService.getEpisodes(
-      this.id
+      this.route.snapshot.paramMap.get('id')
     ).subscribe(result => this.episodes = result);
 
   }

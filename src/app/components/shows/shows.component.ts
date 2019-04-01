@@ -16,13 +16,6 @@ shows: Show[];
 // this.showService.
 // });
   }
-// remove from UI
-  deleteShow(show: Show){
-    this.shows = this.shows.filter(t => t.id !== show.id);
-
-    // remove from server
-    this.showService.deleteShow(show).subscribe();
-  }
 
   addShows(show: Show){
     this.showService.addShows(show).subscribe(show => {
